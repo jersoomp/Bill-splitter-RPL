@@ -1,11 +1,14 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite' // <--- confirm this import exists
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  base: "/Bill-splitter-RPL/", // <--- CHANGE THIS to your actual GitHub repository name
+  plugins: [
+    react(),
+    tailwindcss(), // <--- confirm this function is called
+  ],
+  base: "/Bill-splitter-RPL/",
   server: {
     port: 5173,
   },
-});
+})
